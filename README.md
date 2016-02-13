@@ -13,7 +13,7 @@ The components are split into three main sections
 
 #### Core
 
-#####Component.Browse.Grid
+#####Browse.Grid (Table)
 
 Attributes
 
@@ -21,49 +21,55 @@ Attributes
 * Update based on form input
 * Display action icons which then link to defined actions
 
-#####Component.Accordion
+#####Accordion
 
 * Populate and update header and content based on JSON model data
 
-Component.Accordion.Grid
+#####AccordionGrid
 
-#####Component.Dialog
+#####Dialog
 
 * Modal dialog with dynamic Title, Buttons and Content (view)
 * Note: Panes can be embedded in this component
 
-#####Component.ProgressBar
+#####ProgressBar
 
-#####Component.ProcessSpinner
+#####ProcessSpinner
 
 #### Form
 
-#####Component.Form.Panel
+#####Panel
 
 * Allow for dynamic fields
 * Validate fields as focus is shifted
 * Contain buttons each with an action to be fired (e.g. Save, Clear)
 
-#####Component.Form.Checkbox
+#####Checkbox
 
-#####Component.Form.Field
+#####Field
 
-#####Component.Form.TextArea
+#####TextArea
 
-#####Component.Form.TypeAhead
+#####TypeAhead
 
-#####Component.Form.DateField
+#####DateField
 
-#####Component.Form.DateTimeField
+#####DateTimeField
 
-#####Component.Form.ListField
+#####ListField
 
-#####Component.Form.Switch
+#####Switch
 
-#####Component.Form.Slider
+#####Slider
 
-#####Component.Forn.Buttonset
+#####Button
+
+#####Buttonset
 
 #### Data Visualization
 
-#####Component.DataVisualization.
+#####PieChart
+
+#####LineGraph
+
+#####BarChart
