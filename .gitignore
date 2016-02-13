@@ -2,3 +2,4 @@
 elm-package.json
 elm-stuff/*
 git
+.DS_Store

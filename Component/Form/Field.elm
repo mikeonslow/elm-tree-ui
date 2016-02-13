@@ -76,7 +76,7 @@ modelSignal : Signal.Signal Model
 modelSignal =
   Signal.foldp update initialModel mb.signal
 
-{--}
+{--
 main : Signal.Signal Html.Html
 main =
   Signal.map (view mb.address) modelSignal
