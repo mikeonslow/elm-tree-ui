@@ -1,5 +1,5 @@
-module Component.Form.Field (Model, Action, update, view, initialModel, mb, modelSignal) where
---module Main where -- Used for testing in web editor
+module Component.Form.Field (Model, Action, update, view, template, initialModel, mb, modelSignal) where
+--module Main where
 
 import String
 import Html exposing (..)
@@ -68,10 +68,8 @@ update action model =
             ++ (toString model.minLength) ++ " charaters"
           else if model.maxLength < (String.length str) then "Field cannot be more than "
             ++ (toString model.maxLength) ++ " charaters"
-          else str
-        x = Debug.log str 1
+          else ""
       in
-        --{ model | errorMessage = (checkValues str model) }
         { model | value = str, errorMessage = (checkValues str model)}
 
 
@@ -85,7 +83,7 @@ modelSignal : Signal.Signal Model
 modelSignal =
   Signal.foldp update initialModel mb.signal
 
-{-- Used for testing in web editor
+{--
 main : Signal.Signal Html.Html
 main =
   Signal.map (view mb.address) modelSignal
