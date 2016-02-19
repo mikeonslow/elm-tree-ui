@@ -1,11 +1,11 @@
 module Component.Form.Field (Model, Action, update, view, template, initialModel, mb, modelSignal) where
---module Main where
 
 import String
 import Html exposing (..)
 import Html.Events exposing (..)
 import Html.Attributes exposing (..)
 import Signal exposing (Address, mailbox)
+
 
 template address model =
   div [ class "row" ] [
@@ -21,6 +21,7 @@ template address model =
 
         ]
 
+
 type alias Model = {
     name : String
     ,type' : String
@@ -34,7 +35,6 @@ type alias Model = {
 
 
 initialModel : Model
-
 initialModel = {
     name = ""
     ,type' = "text"
@@ -60,14 +60,17 @@ type Action
 update : Action -> Model -> Model
 update action model =
   case action of
+
     NoOp -> model
+
     Validate str ->
       let
         checkValues str model =
-          if model.minLength > (String.length str) then "Field requires at least "
-            ++ (toString model.minLength) ++ " charaters"
+          if model.required && 1 > (String.length str) then "Field is required and cannot be blank"
+          else if model.minLength > (String.length str) then "Field requires at least "
+            ++ (toString model.minLength) ++ " characters"
           else if model.maxLength < (String.length str) then "Field cannot be more than "
-            ++ (toString model.maxLength) ++ " charaters"
+            ++ (toString model.maxLength) ++ " characters"
           else ""
       in
         { model | value = str, errorMessage = (checkValues str model)}
