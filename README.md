@@ -34,7 +34,11 @@ Attributes
 
 #####ProgressBar
 
+* Wraps MaterializeCSS Linear Determinate Preloader (MaterializeCSS example: http://materializecss.com/preloader.html)
+
 #####ProcessSpinner
+
+* Wraps MaterializeCSS Linear Circular (MaterializeCSS example: http://materializecss.com/preloader.html)
 
 #### Form
 
